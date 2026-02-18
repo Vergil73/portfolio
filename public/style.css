@@ -4,7 +4,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     font-family: 'Raleway','Helvetica Neue',Helvetica,Arial,sans-serif;
-    margin: 2rem;
+    margin: 0;
 }
 
 
@@ -18,7 +18,6 @@ p {
 a {
     text-decoration: none; 
     color: #1f2937;
-    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -38,6 +37,10 @@ ul {
     /* background-color: #e5e7eb; */
     border-bottom: 1px solid black;
     background-color: rgba(255,255,255,1);
+}
+
+.navbar a{
+    font-size: 2rem;
 }
 
 .navbar a:hover{
@@ -92,173 +95,292 @@ ul {
 
 /* PROJECTS LIST */
 
-.project{
+.head {
+    text-align: center;  
+    margin-bottom: 3rem;  
+    font-size: 2.5rem;    
+}
+
+
+.project-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
-    gap: 2rem;
+    gap: 5rem;
+    margin-bottom: 3rem;
 }
 
 .project-photo{
     max-width: 800px;
+    aspect-ratio: 6/4;
 }
 
 .project-photo img{
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-description{
     display: block;
-    max-width: 800px;
+    max-width: 350px;
     /* color: #212529; */
 }
 
+.project-para{
 
+}
+
+
+/* SKILLS */
+.skills{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.skill-list{
+    display: flex;
+    justify-content: center;
+}
+
+.skill-head{
+    font-size: 1.4rem;
+}
+
+.skill-list li{
+    font-size: 1.2rem;
+}
+
+/* FOOTER */
+.footer{
+    margin: 0;
+    padding: 0;
+    background-color: #0e1015;
+    padding: 2rem;
+    color: rgba(255,255,255,1);
+    text-align: center;
+}
+
+.footer h2,
+.footer p,
+.footer a {
+    color: rgba(255,255,255,1);
+}
 
 @media (max-width: 600px) {
 
-    body{
-        margin: 0;
-    }
-
+    /* =========================
+       NAVBAR (mobile top bar)
+       ========================= */
     .navbar {
-        border-bottom: none;
         padding: 0;
-        margin-top: 0;
-        /* position: relative; */
+        border-bottom: none;
+        background-color: rgba(255,255,255,0.8);
+        backdrop-filter: blur(8px);
     }
 
-    /* SIDEBAR MENU PANEL */
+
+    /* =========================
+       SIDEBAR MENU PANEL
+       ========================= */
     .navbar ul {
+
         display: flex;
         flex-direction: column;
-        /* start items from top instead of center */
+
         justify-content: flex-start;
-        /* align items to left */
         align-items: flex-start;
+
         gap: 2rem;
 
-        /* transparent glass effect background */
-        background-color: rgba(229, 231, 235, 0.1);
-
-        /* blur content behind sidebar */
-        backdrop-filter: blur(10px);
-
-        /* fixed makes it stick to screen */
         position: fixed;
-
         top: 0;
         left: 0;
 
-        /* full screen height */
         height: 100vh;
-
-        /* sidebar width (NOT full screen) */
         width: 250px;
 
-        /* push menu items below hamburger */
         padding-top: 80px;
-
-        /* spacing from left edge */
         padding-left: 20px;
 
-        /* stacking order */
+        background-color: rgba(229,231,235,0.7);
+        backdrop-filter: blur(10px);
+
         z-index: 50;
 
-        /* start hidden off screen */
         transform: translateX(-100%);
-
-        /* smooth slide animation */
         transition: transform 0.3s ease;
     }
 
-
-
-    /* WHEN checkbox is checked → show sidebar */
+    /* show sidebar when toggled */
     #menu-toggle:checked ~ ul {
         transform: translateX(0);
     }
 
-    /* HAMBURGER BUTTON CONTAINER */
+
+    /* =========================
+       HAMBURGER BUTTON
+       ========================= */
     .navbar label {
+
         display: block;
+
         width: 35px;
         height: 25px;
-        cursor: pointer;
-        position: fixed; 
+
+        position: fixed;
         top: 20px;
         left: 20px;
-        /* above sidebar */
+
+        cursor: pointer;
+
         z-index: 100;
     }
 
 
-
-
-    /* HAMBURGER MIDDLE LINE */
+    /* hamburger lines */
     .navbar span {
+
         position: absolute;
+
+        width: 100%;
+        height: 3px;
+
+        background-color: #011015;
+
         top: 50%;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: #011015;
         transform: translateY(-50%);
+
         transition: all 0.3s ease;
     }
 
-
-
-    /* TOP LINE */
-    .navbar span::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background-color: #011015;
-        top: -10px;
-        transition: all 0.3s ease;
-    }
-
-
-
-    /* BOTTOM LINE */
+    .navbar span::before,
     .navbar span::after {
+
         content: "";
+
         position: absolute;
+
         width: 100%;
         height: 3px;
+
         background-color: #011015;
-        top: 10px;
+
         transition: all 0.3s ease;
     }
 
-    /* TURN HAMBURGER INTO X */
+    .navbar span::before {
+        top: -10px;
+    }
 
+    .navbar span::after {
+        top: 10px;
+    }
 
-    /* hide middle line */
+    /* transform into X */
     #menu-toggle:checked ~ label span {
         background-color: transparent;
     }
 
-
-    /* rotate top line */
     #menu-toggle:checked ~ label span::before {
         top: 0;
         transform: rotate(45deg);
     }
 
-    /* rotate bottom line */
     #menu-toggle:checked ~ label span::after {
         top: 0;
         transform: rotate(-45deg);
     }
 
-    .header{
-        margin-top: 4rem;
+
+
+    /* =========================
+       HEADER (mobile layout)
+       ========================= */
+    .header {
+
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        text-align: center;
     }
 
+    .header h1 {
+
+        font-size: 28px;
+        line-height: 36px;
+
+        max-width: 100%;
+    }
+
+    .header p {
+
+        font-size: 16px;
+        line-height: 26px;
+
+        max-width: 100%;
+    }
+
+
+
+    /* =========================
+       PROJECT SECTION (stack)
+       ========================= */
+    .project-container {
+
+        flex-direction: column;
+
+        gap: 2rem;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-photo {
+
+        max-width: 100%;
+    }
+
+    .project-description {
+
+        max-width: 100%;
+    }
+
+
+
+    /* =========================
+       SKILLS SECTION
+       ========================= */
+    .skill-list {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        align-items: center;
+    }
+
+    .skill-list li {
+
+        font-size: 16px;
+    }
+
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+    .footer {
+
+        padding: 2rem 1rem;
+
+        font-size: 14px;
+    }
 
 }
