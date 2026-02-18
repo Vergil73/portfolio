@@ -100,25 +100,15 @@ ul {
 }
 
 
-/* .project-container{
+.project-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     gap: 5rem;
     margin-bottom: 3rem;
-} */
-
-.project-container {
-    flex-direction: column;
-    justify-content: flex-start; /* ADD THIS */
-    align-items: center; /* ADD THIS */
-    gap: 2rem;
-    padding-left: 20px;
-    padding-right: 20px;
 }
-
-
+ 
 
 .project-photo{
     max-width: 800px;
@@ -133,22 +123,11 @@ ul {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* .project-description{
+.project-description{
     display: block;
     max-width: 350px;
-} */
-
-.project-description {
-    max-width: 100%;
-    text-align: center;
+    /* color: #212529; */
 }
-
-.project-photo {
-    max-width: 100%;
-    width: 100%;
-}
-
-
 
 
 
@@ -188,7 +167,7 @@ ul {
     color: rgba(255,255,255,1);
 }
 
-/* @media (max-width: 600px) { */
+@media (max-width: 600px) {
 
     /* =========================
        NAVBAR (mobile top bar)
@@ -318,7 +297,7 @@ ul {
     /* =========================
        HEADER (mobile layout)
        ========================= */
-    /* .header {
+    .header {
 
         margin-top: 1rem;
         margin-bottom: 2rem;
@@ -343,14 +322,14 @@ ul {
         line-height: 26px;
 
         max-width: 100%;
-    } */
+    }
 
 
 
     /* =========================
        PROJECT SECTION (stack)
        ========================= */
-    /* .project-container {
+    .project-container {
 
         flex-direction: column;
 
@@ -368,14 +347,14 @@ ul {
     .project-description {
 
         max-width: 100%;
-    } */
+    }
 
 
 
     /* =========================
        SKILLS SECTION
        ========================= */
-    /* .skill-list {
+    .skill-list {
 
         flex-direction: column;
 
@@ -387,113 +366,18 @@ ul {
     .skill-list li {
 
         font-size: 16px;
-    } */
+    }
 
 
 
     /* =========================
        FOOTER
        ========================= */
-    /* .footer {
-
-        padding: 2rem 1rem;
-
-        font-size: 14px;
-    }
-
-} */
-
-@media (max-width: 600px) {
-
-    /* GLOBAL TEXT FIX */
-    body {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 26px;
-        text-align: center;
-    }
-
-    /* HEADER */
-    .header {
-        margin-top: 1.5rem;
-        margin-bottom: 2rem;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-    }
-
-    .header h1 {
-        font-size: 28px;
-        line-height: 36px;
-        max-width: 100%;
-    }
-
-    .header p {
-        font-size: 16px;
-        line-height: 26px;
-        max-width: 100%;
-    }
-
-    /* PROJECT SECTION */
-    .project {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-bottom: 3rem;
-    }
-
-    .project-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2rem;
-        width: 100%;
-    }
-
-    .project-photo {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .project-photo img {
-        width: 100%;
-        height: auto;
-    }
-
-    .project-description {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    /* SKILLS */
-    .skill-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-    }
-
-    .skill-list li {
-        font-size: 16px;
-    }
-
-    /* SECTION HEADINGS */
-    .head {
-        font-size: 24px;
-        margin-bottom: 2rem;
-    }
-
-    /* FOOTER */
     .footer {
+
         padding: 2rem 1rem;
+
         font-size: 14px;
-        text-align: center;
     }
 
 }
