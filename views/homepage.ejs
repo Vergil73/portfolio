@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <title>Portfolio</title>
@@ -11,26 +14,39 @@
 <body>
 
     <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle">
+            <span></span>
+        </label>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
     </nav>
-    
+
+
 
     <header class="header">
-        <h1 id="name">NERO</h1>
-        <p id="name-detail">Full-Stack Developer (Backend-focused)</p>
-        <p>I build backend-driven web applications with authentication, databases, and admin logic.</p>
+        <h1 id="header-title">Joel Limbu: Full-Stack Developer (Backend-focused)</h1>
+        <p id="header-para">Welcome to my freelance Node.js developer portfolio, where I showcase projects for global companies focused on building robust back-end services, dynamic SaaS platforms, and scalable web applications. Leveraging Node.js, React, AWS, and other modern technologies, I design solutions that prioritize performance, efficiency, and seamless user experiences. From optimizing server infrastructure to ensuring application scalability, I deliver solutions that meet business objectives and exceed user expectations. Click here to view my full portfolio. </p>
         
-        <div class="ref">
+        <!-- <div class="ref">
             <a id="project-ref" href="#projects">View Projects</a>
-        </div>
+        </div> -->
     </header>
 
-    <section class="projects">
         
-  
-        <article class="project-container">
+        <section class="project">
+        
+            <div class="project-photo">
+                <img src="photos/shoeStore.png" alt="Screenshot of Shoe Store project">
+            </div>
+            
             <div class="project-description">
                 <h2>Project Name: </h2>
                 <h3>Shoe Store</h3>
@@ -39,13 +55,13 @@
                 <a href="https://shoes-alpha-kohl.vercel.app/">Live Demo</a>
                 <a href="https://github.com/Vergil73/shoes-website">Github</a>
             </div>
+        </section>
 
+        <!-- <section class="project">
             <div class="project-photo">
-                <img src="photos/shoeStore.png" alt="Screenshot of Shoe Store project">
+                <img src="photos/restaurant.png" alt="Screenshot of Shoe Store project">
             </div>
-        </article>
-
-        <article class="project-container">
+            
             <div class="project-description">
                 <h2>Project Name: </h2>
                 <h3>Restaurant</h3>
@@ -54,13 +70,9 @@
                 <a href="https://restaurant-kappa-ten.vercel.app/">Live Demo</a>
                 <a href="https://github.com/Vergil73/restaurant">Github</a>
             </div>
+        </section> -->
 
-            <div class="project-photo">
-                <img src="photos/restaurant.png" alt="Screenshot of Shoe Store project">
-            </div>
-        </article>
-
-    </section>
+   
 
    
     <section id="skills">
@@ -98,15 +110,13 @@
     </ul>
     </section>
 
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p><a href="mailto:klein@example.com">Email</a></p>
-        <p><a href="https://wa.me/9779800000000" target="_blank">WhatsApp</a></p>
-    </section>
-
     <footer>
-    <p>© 2026 Klein. All rights reserved.</p>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p><a href="mailto:klein@example.com">Email</a></p>
+            <p><a href="https://wa.me/9779800000000" target="_blank">WhatsApp</a></p>
+        </section>
+        <p>© 2026 Klein. All rights reserved.</p>
     </footer>
 
 

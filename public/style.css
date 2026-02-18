@@ -1,322 +1,264 @@
-
-
-/* Basic reset */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: #f8f9fa;
-    color: #333;
-    line-height: 1.6; /* Good line height for readability */
+body {   
+    background-color: #e5e7eb;
+    color: #011015; 
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Raleway','Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin: 2rem;
 }
 
-/* Navigation - Bigger text */
+
+p {
+    color: #1f2937;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+a {
+    text-decoration: none; 
+    color: #1f2937;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+ul {
+    list-style: none;
+}
+
+/* DESKTOP NAVBAR */
 .navbar {
-    background: white;
-    padding: 25px;
-    text-align: center;
-    border-bottom: 2px solid #e0e0e0;
-}
-
-.navbar a {
-    margin: 0 25px;
-    font-size: 1.3rem; /* Bigger font */
-    color: #444;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px 15px;
-}
-
-.navbar a:hover {
-    color: #0066cc;
-    background: #f0f8ff;
-    border-radius: 5px;
-}
-
-/* Header - Good readable sizes */
-.header {
-    text-align: center;
-    padding: 70px 30px; /* More padding */
-    background: white;
-    margin: 30px auto;
-    max-width: 1000px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-#name {
-    font-size: 3.8rem; /* Big and readable */
-    margin: 0;
-    color: #0066cc;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 15px;
-}
-
-#name-detail {
-    font-size: 1.8rem; /* Big enough */
-    margin: 0 0 30px 0;
-    color: #666;
-    font-weight: 500;
-}
-
-.header p {
-    font-size: 1.3rem; /* Big readable paragraph */
-    max-width: 700px;
-    margin: 0 auto 40px;
-    line-height: 1.7; /* More space between lines */
-    color: #444;
-    padding: 0 20px;
-}
-
-#project-ref {
-    display: inline-block;
-    background: #0066cc;
-    color: white;
-    padding: 15px 40px; /* Big button */
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-#project-ref:hover {
-    background: #0052a3;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,102,204,0.2);
-}
-
-/* Projects section - Clear and readable */
-.projects {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 30px;
-}
-
-.project-container {
-    background: white;
-    padding: 35px; /* More padding */
-    margin-bottom: 40px;
-    border-radius: 10px;
-    border-left: 6px solid #0066cc;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.project-description h2 {
-    font-size: 1.1rem;
-    color: #777;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-}
-
-.project-description h3 {
-    font-size: 2rem; /* Big title */
-    margin: 15px 0 20px;
-    color: #222;
-    font-weight: 600;
-    line-height: 1.3;
-}
-
-.project-para {
-    font-size: 1.1rem; /* Bigger text */
-    margin-bottom: 20px;
-    color: #444;
-    line-height: 1.7; /* More line spacing */
-}
-
-.project-description a {
-    display: inline-block;
-    background: #e6f2ff;
-    color: #0066cc;
-    padding: 12px 25px; /* Big links */
-    margin-right: 15px;
-    margin-bottom: 15px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 1.05rem;
-    border: 2px solid #b3d9ff;
-}
-
-.project-description a:hover {
-    background: #0066cc;
-    color: white;
-}
-
-.project-photo {
-    margin-top: 30px;
-}
-
-.project-photo img {
+    /* border-bottom: 0.1px solid #011015; */
+    padding: 1.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0%;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    /* background-color: #e5e7eb; */
+    border-bottom: 1px solid black;
+    background-color: rgba(255,255,255,1);
 }
 
-/* Skills section - Easy to read */
-#skills {
-    max-width: 1000px;
-    margin: 70px auto;
-    padding: 0 30px;
+.navbar a:hover{
+    color: #305c91;
 }
 
-#skills h2 {
-    font-size: 2.5rem; /* Big heading */
+
+
+/* DESKTOP MENU LAYOUT */
+.navbar ul {
+    display: flex;  
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* HIDE CHECKBOX (used only for toggle logic) */
+.navbar input {
+    display: none;
+}
+
+/* HIDE HAMBURGER ON DESKTOP */
+.navbar label {
+    display: none;
+    
+}
+
+/* HEADER SECTION */
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+.header h1{
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    margin-bottom: 50px;
-    color: #222;
-    font-weight: 700;
-    line-height: 1.2;
+    max-width: 700px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    /* color: #305c91; */
 }
 
-.skills {
-    list-style: none;
-    padding: 0;
+.header P{
+     max-width: 620px;
 }
 
-.skills > li {
-    background: white;
-    padding: 30px; /* More padding */
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+/* PROJECTS LIST */
+
+.project{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
 }
 
-.skills > li strong {
-    font-size: 1.4rem; /* Big category */
-    color: #222;
+.project-photo{
+    max-width: 800px;
+}
+
+.project-photo img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.project-description{
     display: block;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #e6f2ff;
-    padding-bottom: 12px;
-    font-weight: 600;
+    max-width: 800px;
+    /* color: #212529; */
 }
 
-.skills ul {
-    list-style: none;
-    padding: 0;
-}
 
-.skills ul li {
-    padding: 12px 0; /* More space between items */
-    color: #444;
-    border-bottom: 1px solid #eee;
-    font-size: 1.1rem; /* Bigger text */
-    line-height: 1.5;
-}
 
-.skills ul li:last-child {
-    border-bottom: none;
-}
+@media (max-width: 600px) {
 
-/* Contact section - Clear text */
-#contact {
-    background: #f0f8ff;
-    padding: 70px 30px;
-    text-align: center;
-    margin-top: 70px;
-}
-
-#contact a {
-    text-decoration: none;
-    color: black;
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-    color: #222;
-    font-weight: 700;
-}
-
-#contact p {
-    font-size: 1.4rem; /* Big email */
-    color: #0066cc;
-    margin: 0;
-    font-weight: 500;
-}
-
-/* Footer - Clear copyright */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    font-size: 1.1rem; /* Bigger footer text */
-}
-
-footer p {
-    margin: 0;
-    line-height: 1.5;
-}
-
-/* Mobile styles - Still readable on small screens */
-@media (max-width: 768px) {
-    .header, .projects, #skills, #contact {
-        padding: 0 25px;
+    body{
+        margin: 0;
     }
-    
-    #name {
-        font-size: 2.8rem; /* Still big on mobile */
+
+    .navbar {
+        border-bottom: none;
+        padding: 0;
+        margin-top: 0;
+        /* position: relative; */
     }
-    
-    #name-detail {
-        font-size: 1.5rem;
+
+    /* SIDEBAR MENU PANEL */
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        /* start items from top instead of center */
+        justify-content: flex-start;
+        /* align items to left */
+        align-items: flex-start;
+        gap: 2rem;
+
+        /* transparent glass effect background */
+        background-color: rgba(229, 231, 235, 0.1);
+
+        /* blur content behind sidebar */
+        backdrop-filter: blur(10px);
+
+        /* fixed makes it stick to screen */
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        /* full screen height */
+        height: 100vh;
+
+        /* sidebar width (NOT full screen) */
+        width: 250px;
+
+        /* push menu items below hamburger */
+        padding-top: 80px;
+
+        /* spacing from left edge */
+        padding-left: 20px;
+
+        /* stacking order */
+        z-index: 50;
+
+        /* start hidden off screen */
+        transform: translateX(-100%);
+
+        /* smooth slide animation */
+        transition: transform 0.3s ease;
     }
-    
-    .header p {
-        font-size: 1.2rem;
-        line-height: 1.6;
+
+
+
+    /* WHEN checkbox is checked → show sidebar */
+    #menu-toggle:checked ~ ul {
+        transform: translateX(0);
     }
-    
-    .navbar a {
-        font-size: 1.2rem;
-        margin: 0 10px;
-        padding: 8px 12px;
-        display: inline-block;
-    }
-    
-    .project-description h3 {
-        font-size: 1.7rem;
-    }
-    
-    .project-para {
-        font-size: 1.05rem;
-    }
-    
-    .project-description a {
-        font-size: 1rem;
-        padding: 10px 20px;
+
+    /* HAMBURGER BUTTON CONTAINER */
+    .navbar label {
         display: block;
-        margin: 10px 0;
-        text-align: center;
+        width: 35px;
+        height: 25px;
+        cursor: pointer;
+        position: fixed; 
+        top: 20px;
+        left: 20px;
+        /* above sidebar */
+        z-index: 100;
     }
-    
-    #skills h2, #contact h2 {
-        font-size: 2rem;
-    }
-    
-    #contact p {
-        font-size: 1.2rem;
-    }
-}
 
-/* Extra small phones */
-@media (max-width: 480px) {
-    #name {
-        font-size: 2.2rem;
+
+
+
+    /* HAMBURGER MIDDLE LINE */
+    .navbar span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #011015;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
     }
-    
-    .header p {
-        font-size: 1.1rem;
+
+
+
+    /* TOP LINE */
+    .navbar span::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #011015;
+        top: -10px;
+        transition: all 0.3s ease;
     }
-    
-    #project-ref {
-        font-size: 1.1rem;
-        padding: 12px 30px;
+
+
+
+    /* BOTTOM LINE */
+    .navbar span::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #011015;
+        top: 10px;
+        transition: all 0.3s ease;
     }
+
+    /* TURN HAMBURGER INTO X */
+
+
+    /* hide middle line */
+    #menu-toggle:checked ~ label span {
+        background-color: transparent;
+    }
+
+
+    /* rotate top line */
+    #menu-toggle:checked ~ label span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    /* rotate bottom line */
+    #menu-toggle:checked ~ label span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .header{
+        margin-top: 4rem;
+    }
+
+
 }
